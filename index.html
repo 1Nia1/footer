@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #c7bac4;
+            overflow: hidden;
+            cursor: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .glow {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #d9dad4 10%, #f3f4f0 50%, transparent 80%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(30px);
+            transition: transform 0.05s linear;
+            z-index: -1;
+        }
+        table {
+            width: 80%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background: #f3f4f0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            color: #58534c;
+        }
+        th {
+            background-color: #7088b3;
+            color: white;
+        }
+        td b {
+            color: #2d2b27;
+        }
+        a {
+            text-decoration: none;
+            color: #58534c;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="Reka_bentuk_tanpa_tajuk__2_-removebg-preview (1).png" alt="" width="100px" height="100px">
+
+    <table>
+        <tr>
+            <th>ADDRESS</th>
+            <th>SOCIAL</th>
+            <th>CONTACT</th>
+            <th>PAGES</th>
+        </tr>
+        <tr>
+            <td>
+                <b>Kolej Vokasional Perdagangan:</b>
+                <p>7, Jalan Tun Abdul Razak, Taman Tasek, </p>
+                <p>80350 Johor Bahru, Johor Darul Ta'zim</p>
+                <b>Alamat Rumah:</b>
+                <p>01-03 Blok A P/Puri Sri Akasia,</p>
+                <p>Jalan Persisiran Titiwangsa,</p>
+                <p>Utama Taman Tampoi Indah,</p>
+                <p>81200 Johor Bahru,</p>
+                <p>Johor</p>
+            </td>
+            <td>
+                <a href="https://www.instagram.com/">Instagram</a><br>
+                <a href="https://www.facebook.com/">Facebook</a><br>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+            </td>
+            <td>+01120689498</td>
+            <td>
+                <a href="https://sites.google.com/u/0/d/14D6hW-JgpQclChbHSYOEffMejI0cwLOF/p/1jym-0eGB8xaXz8ralOP_vH5GUp0ceI6E/preview?authuser=0">Home</a><br>
+                <a href="https://sites.google.com/u/0/d/14D6hW-JgpQclChbHSYOEffMejI0cwLOF/p/18g70aNrKb8LSukJ-QcT7ESXsOGKL6Pj2/preview?authuser=0">Profil Diri</a><br>
+                <a href="https://sites.google.com/u/0/d/14D6hW-JgpQclChbHSYOEffMejI0cwLOF/p/1Pc6PRxORtPmg7EELhOCmwiLbKZ83BgG_/preview?authuser=0">Maklumat DKA2233</a><br>
+                <a href="https://sites.google.com/u/0/d/14D6hW-JgpQclChbHSYOEffMejI0cwLOF/p/1xJEon0LF2mtvTEswxPZ_e_gap-aPZi5K/preview?authuser=0">Kemahiran & Projek</a>
+            </td>
+        </tr>
+    </table>
+    <footer>
+        <marquee behavior="" direction="">
+            <p>© 2023. All rights reserved. Designed by Nurdania Afrina.</p>
+        </marquee>
+    </footer>
+
+    <div class="glow"></div>
+
+    <script>
+        const glow = document.querySelector(".glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+    </script>
+</body>
+</html>
