@@ -13,10 +13,22 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      overflow: hidden;
+            cursor: none;
       /* Jika anda perlukan efek "cursor none" atau glow, 
          boleh copy semula dari code asal dan letak di sini */
     }
-
+.glow {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #d9dad4 10%, #f3f4f0 50%, transparent 80%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(30px);
+            transition: transform 0.05s linear;
+            z-index: -1;
+        }
     /* Container Kandungan Utama */
     .content {
       flex: 1; /* Supaya footer melekat di bawah */
@@ -30,7 +42,7 @@
      *                 GAYA UNTUK FOOTER
      ****************************************************/
     footer {
-      background-color: #1d1d1d;  /* latar footer (boleh tukar) */
+      background-color: #7a6653;  /* latar footer (boleh tukar) */
       color: #fff;                /* warna tulisan utama footer */
       padding: 30px 15px;         /* ruang atas/bawah/kiri/kanan */
       font-size: 14px;
@@ -177,5 +189,15 @@
       </div>
     </div>
   </footer>
+   <div class="glow">
+      
+        </div>
+   <script>
+        const glow = document.querySelector(".glow");
+        document.addEventListener("mousemove", (e) => {
+          
+            glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+    </script>
 </body>
 </html>
